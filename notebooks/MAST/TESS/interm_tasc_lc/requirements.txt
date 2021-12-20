@@ -1,5 +1,4 @@
-astropy>=3.2.1
-astroquery==0.3.9
-bokeh>=0.12.16
-matplotlib>=2.2.2
-numpy>=1.13.3
+astroquery>=0.4.4
+bokeh>=2.4.2
+jupyter>=1.0.0
+matplotlib>=3.5.1

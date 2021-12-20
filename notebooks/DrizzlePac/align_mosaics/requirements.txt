@@ -1,3 +1,5 @@
-astroquery >= 0.3.7
-ccdproc >= 1.3.0
-drizzlepac >=2.2.4
+astroquery>=0.4.4
+ccdproc>=2.2.0
+drizzlepac>=3.3.1
+jupyter>=1.0.0
+matplotlib>=3.5.1

@@ -1,4 +1,4 @@
 astroquery>=0.4.4
-drizzlepac>=3.3.1
 jupyter>=1.0.0
-regions>=0.5
+matplotlib>=3.5.1
+scipy>=1.7.3

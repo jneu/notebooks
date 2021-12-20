@@ -1,1 +1,2 @@
+jupyter>=1.0.0
 lightkurve>=2.0.11

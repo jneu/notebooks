@@ -46,10 +46,7 @@ RUN \
 # install a base set of packages; we want the latest of each
 RUN \
     pip install \
-        astropy \
-        astroquery \
         jupyter \
-        matplotlib \
         papermill
 
 # create a working directory

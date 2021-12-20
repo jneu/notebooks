@@ -1,2 +1,3 @@
-astroquery >= 0.3.7
-drizzlepac >=2.2.4
+astroquery>=0.4.4
+drizzlepac>=3.3.1
+jupyter>=1.0.0
