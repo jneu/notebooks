@@ -1,1 +1,2 @@
+costools>=1.2.4
 jupyter>=1.0.0

@@ -1,0 +1,7 @@
+ARG BASE_IMAGE=nb
+
+FROM $BASE_IMAGE
+
+# install a base set of packages; we want the latest of each
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --requirement /tmp/requirements.txt

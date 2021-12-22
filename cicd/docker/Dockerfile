@@ -2,6 +2,8 @@ FROM continuumio/miniconda3
 
 # choose a name for the non-root user that will run in this container
 ARG RUN_AS_USER=nb
+# choose a name for the conda environment
+ARG CONDA_ENV=notebooks_env
 # choose a version of python
 ARG PYTHON_VERSION=3.8
 
@@ -16,6 +18,7 @@ RUN \
     apt-get install --yes \
         build-essential \
     && \
+    rm -rf /var/lib/apt/lists/* && \
     conda update --name base --channel defaults conda
 
 # create the non-root user and give it control of conda
@@ -39,9 +42,9 @@ ENV BASH_ENV=/home/$RUN_AS_USER/.bash_env
 
 # create a conda environment and activate it by default
 RUN \
-    conda create --name notebooks_env python=$PYTHON_VERSION && \
-    echo 'conda activate notebooks_env' >> ~/.bashrc && \
-    echo 'conda activate notebooks_env' >> ~/.bash_env
+    conda create --name $CONDA_ENV python=$PYTHON_VERSION && \
+    echo conda activate $CONDA_ENV >> ~/.bashrc && \
+    echo conda activate $CONDA_ENV >> ~/.bash_env
 
 # install a base set of packages; we want the latest of each
 RUN \
