@@ -17,6 +17,8 @@ RUN \
     apt-get upgrade --yes && \
     apt-get install --yes \
         build-essential \
+        less \
+        vim \
     && \
     rm -rf /var/lib/apt/lists/* && \
     conda update --name base --channel defaults conda

@@ -1,0 +1,16 @@
+ARG BASE_IMAGE=nb:full
+
+FROM $BASE_IMAGE
+
+# add in conda-forge and hstcal
+RUN \
+    conda config --add channels conda-forge && \
+    conda config --set channel_priority strict
+RUN \
+    conda install \
+        'fitsverify>=4.20' \
+        'hstcal>=2.7.2'
+
+# install all packages we could want; we want the latest of each
+COPY requirements_everything.txt /tmp/requirements_everything.txt
+RUN pip install --requirement /tmp/requirements_everything.txt
