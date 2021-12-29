@@ -1,2 +1,2 @@
-astroquery>=0.4.4
+astroquery>=0.4.5
 jupyter>=1.0.0

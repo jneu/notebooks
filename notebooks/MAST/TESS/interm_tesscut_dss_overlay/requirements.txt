@@ -1,4 +1,4 @@
-astroquery>=0.4.4
+astroquery>=0.4.5
 jupyter>=1.0.0
 k2flix>=2.4.0
 reproject>=0.8

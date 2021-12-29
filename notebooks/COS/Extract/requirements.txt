@@ -1,4 +1,5 @@
-astroquery>=0.4.4
+astroquery>=0.4.5
 calcos>=3.3.11
+crds>=11.5.2
 jupyter>=1.0.0
 matplotlib>=3.5.1

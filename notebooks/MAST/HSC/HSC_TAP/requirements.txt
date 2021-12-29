@@ -1,4 +1,4 @@
 jupyter>=1.0.0
 matplotlib>=3.5.1
-pyvo>=1.1
+pyvo>=1.2
 scipy>=1.7.3

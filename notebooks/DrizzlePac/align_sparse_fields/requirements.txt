@@ -1,4 +1,4 @@
-astroquery>=0.4.4
-ccdproc>=2.2.0
+astroquery>=0.4.5
+ccdproc>=2.3.0
 drizzlepac>=3.3.1
 jupyter>=1.0.0

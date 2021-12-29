@@ -1,5 +1,5 @@
 astropy>=5.0
-astroquery>=0.4.4
+astroquery>=0.4.5
 calcos>=3.3.11
 ccdproc>=2.3.0
 costools>=1.2.4
