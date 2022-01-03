@@ -1,0 +1,2 @@
+fitsverify>=4.20
+hstcal>=2.7.2

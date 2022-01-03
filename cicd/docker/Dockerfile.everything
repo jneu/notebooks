@@ -6,11 +6,11 @@ FROM $BASE_IMAGE
 RUN \
     conda config --add channels conda-forge && \
     conda config --set channel_priority strict
-RUN \
-    conda install \
-        'fitsverify>=4.20' \
-        'hstcal>=2.7.2'
 
 # install all the packages we could want
-COPY requirements_everything.txt /tmp/requirements_everything.txt
+COPY \
+    environment_everything.txt \
+    requirements_everything.txt \
+    /tmp/
+RUN conda install --file /tmp/environment_everything.txt
 RUN pip install --requirement /tmp/requirements_everything.txt
