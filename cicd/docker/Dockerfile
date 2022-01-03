@@ -1,9 +1,9 @@
 FROM continuumio/miniconda3
 
 # choose a name for the non-root user that will run in this container
-ARG RUN_AS_USER=nb
+ARG RUN_AS_USER=nb_user
 # choose a name for the conda environment
-ARG CONDA_ENV=notebooks_env
+ARG CONDA_ENV=nb_env
 # choose a version of python
 ARG PYTHON_VERSION=3.8
 
@@ -48,11 +48,9 @@ RUN \
     echo conda activate $CONDA_ENV >> ~/.bashrc && \
     echo conda activate $CONDA_ENV >> ~/.bash_env
 
-# install a base set of packages; we want the latest of each
-RUN \
-    pip install \
-        jupyter \
-        papermill
+# install the base packages
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --requirement /tmp/requirements.txt
 
 # create a working directory
 RUN mkdir --parents ~/notebooks/src
